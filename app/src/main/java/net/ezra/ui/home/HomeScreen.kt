@@ -35,6 +35,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.layout.HorizontalAlignmentLine
+import androidx.compose.ui.modifier.modifierLocalProvider
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
@@ -107,11 +108,22 @@ Column(modifier=Modifier
                 horizontalArrangement = Arrangement.Absolute.SpaceEvenly
             ) {
 
-                Card(
+                Card(modifier= Modifier
+                    .size(150.dp)
+                    .clickable {
+
+                    }
+
                 ) {
                     Image(
                         painter = painterResource(id = R.drawable.trouser2),
-                        contentDescription = ""
+                        contentDescription = "",
+                        modifier= Modifier
+////        .background(Color.Cyan)
+                            .fillMaxSize()
+////                .clip(RoundedCornerShape(50))
+                            .size(200.dp),
+//
                     )
 //               TextButton(onClick = { /*TODO*/ },
 //                   modifier=Modifier,
@@ -128,13 +140,24 @@ Column(modifier=Modifier
                 }
 
 
-                Spacer(modifier = Modifier.width(85.dp))
+                Spacer(modifier = Modifier.width(35.dp))
 
-                Card(
+                Card(modifier= Modifier
+                    .size(150.dp)
+                    .clickable {
+
+                    }
                 ) {
                     Image(
                         painter = painterResource(id = R.drawable.blazer3),
-                        contentDescription = ""
+                        contentDescription = "",
+                        modifier= Modifier
+////        .background(Color.Cyan)
+
+                            .fillMaxSize()
+////                .clip(RoundedCornerShape(50))
+                            .size(200.dp),
+
                     )
 //               TextButton(onClick = { /*TODO*/ },
 //                   modifier=Modifier,
@@ -164,7 +187,11 @@ Column(modifier=Modifier
                 horizontalArrangement = Arrangement.Absolute.SpaceEvenly
             ) {
 
-                Card(
+                Card(modifier= Modifier
+                    .size(150.dp)
+                    .clickable {
+
+                    }
                 ) {
                     Image(
                         painter = painterResource(id = R.drawable.hats),
@@ -185,9 +212,13 @@ Column(modifier=Modifier
                 }
 
 
-                Spacer(modifier = Modifier.width(85.dp))
+                Spacer(modifier = Modifier.width(35.dp))
 
-                Card(
+                Card(modifier= Modifier
+                    .size(150.dp)
+                    .clickable {
+
+                    }
                 ) {
                     Image(
                         painter = painterResource(id = R.drawable.belts),
@@ -221,7 +252,13 @@ Column(modifier=Modifier
                 horizontalArrangement = Arrangement.Absolute.SpaceEvenly
             ) {
 
-                Card(
+                Card(modifier= Modifier
+                    .size(150.dp)
+                    .clickable {
+                        navController.navigate(ROUTE_FLANNEL) {
+                            popUpTo(ROUTE_HOME) { inclusive = true }
+                        }
+                    }
                 ) {
                     Image(
                         painter = painterResource(id = R.drawable.flannel),
@@ -235,23 +272,18 @@ Column(modifier=Modifier
 //                   Text(text = "Flannels")
 //               }
 
-                    TextButton(onClick = {
-                        navController.navigate(ROUTE_FLANNEL) {
-                            popUpTo(ROUTE_HOME) { inclusive = true }
-                        }
-
-
-
-                    }) {
-
                         Text(text = "Flannels")
-                    }
+
                 }
 
 
-                Spacer(modifier = Modifier.width(85.dp))
+                Spacer(modifier = Modifier.width(35.dp))
 
-                Card(
+                Card(modifier = Modifier
+                    .size(150.dp)
+                    .clickable {
+
+                    }
                 ) {
                     Image(
                         painter = painterResource(id = R.drawable.jacket1),
@@ -283,7 +315,11 @@ Column(modifier=Modifier
                 horizontalArrangement = Arrangement.Absolute.SpaceEvenly
             ) {
 
-                Card(
+                Card(modifier= Modifier
+                    .size(150.dp)
+                    .clickable {
+
+                    }
                 ) {
                     Image(
                         painter = painterResource(id = R.drawable.wt),
@@ -304,9 +340,13 @@ Column(modifier=Modifier
                 }
 
 
-                Spacer(modifier = Modifier.width(85.dp))
+                Spacer(modifier = Modifier.width(35.dp))
 
-                Card(
+                Card(modifier= Modifier
+                    .size(150.dp)
+                    .clickable {
+
+                    }
                 ) {
                     Image(
                         painter = painterResource(id = R.drawable.tshirt1),
